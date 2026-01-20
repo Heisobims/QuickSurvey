@@ -69,8 +69,8 @@ export default function SurveyPlatform() {
       <div className="min-h-screen bg-white flex items-center justify-center p-4 font-['Sora']">
         <div className="text-center bg-white p-12 rounded-3xl border-2 border-black shadow-[8px_8px_0px_0px_rgba(0,0,0,1)]">
           <CheckCircle2 className="w-20 h-20 text-[#82eda6] mx-auto mb-6" />
-          <h2 className="text-3xl font-bold mb-4">Success!</h2>
-          <p className="text-gray-600">Your insights are helping build a better Nigeria.</p>
+          <h2 className="text-3xl font-bold mb-4">You are a Genius!😊</h2>
+          <p className="text-gray-600">Your submission is helping build a better Nigeria.</p>
         </div>
       </div>
     );
@@ -87,8 +87,8 @@ export default function SurveyPlatform() {
             <div className="inline-block w-28 h-28 mb-6 overflow-hidden rounded-full border-4 border-[#03594d] shadow-lg">
               <img src="https://lh3.google.com/u/0/d/1a0vWFWVWtj9mACG4KUCI9eol31Xw3lfv=w450-h337-p-k-nu-iv1?auditContext=thumbnail" alt="Profile" className="w-full h-full object-cover" />
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4">Building for Nigeria</h1>
-            <p className="text-[#03594d] font-medium max-w-xl mx-auto">Hi, I'm Stanley. Please fill out the details below to help us develop tailored solutions.</p>
+            <h1 className="text-4xl md:text-5xl font-extrabold text-black mb-4">Building for Nigeria, By Nigerians</h1>
+            <p className="text-[#03594d] font-medium max-w-xl mx-auto">Hi, I'm Stanley, Help us understand the challenges you face in Nigeria. Your detailed insights will drive meaningful tech solutions. </p>
           </div>
 
           <div className="bg-white border-2 border-black rounded-2xl p-6 md:p-10 shadow-[12px_12px_0px_0px_rgba(3,89,77,1)]">
@@ -100,14 +100,70 @@ export default function SurveyPlatform() {
                   <h2 className="text-xl font-extrabold uppercase tracking-tight">Personal Profile</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input label="Full Name *" name="name" value={formData.name} onChange={handleChange} />
-                  <Input label="Occupation *" name="occupation" value={formData.occupation} onChange={handleChange} />
-                  <Select label="Age Group *" name="ageGroup" value={formData.ageGroup} options={ageGroups} onChange={handleChange} />
-                  <Select label="Gender *" name="gender" value={formData.gender} options={genders} onChange={handleChange} />
-                  <Select label="Education Level *" name="educationLevel" value={formData.educationLevel} options={educationLevels} onChange={handleChange} />
-                  <Input label="City/Town *" name="location" value={formData.location} onChange={handleChange} />
-                  <Select label="State *" name="state" value={formData.state} options={nigerianStates} onChange={handleChange} />
-                  <Input label="Phone Number *" name="phone" value={formData.phone} onChange={handleChange} />
+                  <Input 
+                    label="Full Name *" 
+                    name="name" 
+                    value={formData.name} 
+                    onChange={handleChange} 
+                    placeholder="e.g., Chukwuma Adeyemi" 
+                    hint="Enter your legal first and last name."
+                  />
+                  <Input 
+                    label="Occupation *" 
+                    name="occupation" 
+                    value={formData.occupation} 
+                    onChange={handleChange} 
+                    placeholder="e.g., Digital Marketer or Student" 
+                    hint="Your current primary work or study area."
+                  />
+                  <Select 
+                    label="Age Group *" 
+                    name="ageGroup" 
+                    value={formData.ageGroup} 
+                    options={ageGroups} 
+                    onChange={handleChange} 
+                    hint="Select the range that includes your current age."
+                  />
+                  <Select 
+                    label="Gender *" 
+                    name="gender" 
+                    value={formData.gender} 
+                    options={genders} 
+                    onChange={handleChange} 
+                    hint="Choose the gender identity you identify with."
+                  />
+                  <Select 
+                    label="Education Level *" 
+                    name="educationLevel" 
+                    value={formData.educationLevel} 
+                    options={educationLevels} 
+                    onChange={handleChange} 
+                    hint="The highest academic qualification you've completed."
+                  />
+                  <Input 
+                    label="City/Town *" 
+                    name="location" 
+                    value={formData.location} 
+                    onChange={handleChange} 
+                    placeholder="e.g., Ikeja" 
+                    hint="The specific city or town where you reside."
+                  />
+                  <Select 
+                    label="State *" 
+                    name="state" 
+                    value={formData.state} 
+                    options={nigerianStates} 
+                    onChange={handleChange} 
+                    hint="The Nigerian state where you are currently based."
+                  />
+                  <Input 
+                    label="Phone Number *" 
+                    name="phone" 
+                    value={formData.phone} 
+                    onChange={handleChange} 
+                    placeholder="e.g., 08012345678" 
+                    hint="A valid mobile number we can reach you on."
+                  />
                 </div>
               </div>
             )}
@@ -120,13 +176,55 @@ export default function SurveyPlatform() {
                   <h2 className="text-xl font-extrabold uppercase tracking-tight">Problem Analysis</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Select label="Sector *" name="sector" value={formData.sector} options={sectors} onChange={handleChange} />
-                  <Select label="Frequency of Problem *" name="frequency" value={formData.frequency} options={frequencies} onChange={handleChange} />
-                  <Select label="How long has this existed? *" name="duration" value={formData.duration} options={durations} onChange={handleChange} />
-                  <Select label="People Affected *" name="peopleAffected" value={formData.peopleAffected} options={peopleAffectedOptions} onChange={handleChange} />
+                  <Select 
+                    label="Sector *" 
+                    name="sector" 
+                    value={formData.sector} 
+                    options={sectors} 
+                    onChange={handleChange} 
+                    hint="Which industry is this problem most related to?"
+                  />
+                  <Select 
+                    label="Frequency of Problem *" 
+                    name="frequency" 
+                    value={formData.frequency} 
+                    options={frequencies} 
+                    onChange={handleChange} 
+                    hint="How often do you encounter this specific challenge?"
+                  />
+                  <Select 
+                    label="How long has this existed? *" 
+                    name="duration" 
+                    value={formData.duration} 
+                    options={durations} 
+                    onChange={handleChange} 
+                    hint="Total time you've been dealing with this issue."
+                  />
+                  <Select 
+                    label="People Affected *" 
+                    name="peopleAffected" 
+                    value={formData.peopleAffected} 
+                    options={peopleAffectedOptions} 
+                    onChange={handleChange} 
+                    hint="Estimate how many others share this same problem."
+                  />
                 </div>
-                <TextArea label="Describe the Problem *" name="problem" value={formData.problem} onChange={handleChange} />
-                <TextArea label="Personal Impact *" name="impact" value={formData.impact} onChange={handleChange} placeholder="How does this affect your daily life?" />
+                <TextArea 
+                  label="Describe the Problem *" 
+                  name="problem" 
+                  value={formData.problem} 
+                  onChange={handleChange} 
+                  placeholder="Clearly explain the specific challenge you are facing..." 
+                  hint="Provide enough detail so we understand the core issue."
+                />
+                <TextArea 
+                  label="Personal Impact *" 
+                  name="impact" 
+                  value={formData.impact} 
+                  onChange={handleChange} 
+                  placeholder="How does this affect your daily life?" 
+                  hint="Explain how this problem limits your goals or well-being."
+                />
               </div>
             )}
 
@@ -138,11 +236,39 @@ export default function SurveyPlatform() {
                   <h2 className="text-xl font-extrabold uppercase tracking-tight">Impact & Current Solutions</h2>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input label="Financial Loss (Monthly ₦) *" name="financialImpact" value={formData.financialImpact} onChange={handleChange} />
-                  <Input label="Time Lost (Weekly Hours) *" name="timeImpact" value={formData.timeImpact} onChange={handleChange} />
+                  <Input 
+                    label="Financial Loss (Monthly ₦) *" 
+                    name="financialImpact" 
+                    value={formData.financialImpact} 
+                    onChange={handleChange} 
+                    placeholder="e.g., 5000" 
+                    hint="Estimated money lost per month due to this problem."
+                  />
+                  <Input 
+                    label="Time Lost (Weekly Hours) *" 
+                    name="timeImpact" 
+                    value={formData.timeImpact} 
+                    onChange={handleChange} 
+                    placeholder="e.g., 10" 
+                    hint="Hours wasted every week trying to resolve this."
+                  />
                 </div>
-                <TextArea label="Your Current Solution *" name="currentSolution" value={formData.currentSolution} onChange={handleChange} placeholder="How do you handle this currently?" />
-                <Input label="Current Cost to Manage (₦) *" name="solutionCost" value={formData.solutionCost} onChange={handleChange} />
+                <TextArea 
+                  label="Your Current Solution *" 
+                  name="currentSolution" 
+                  value={formData.currentSolution} 
+                  onChange={handleChange} 
+                  placeholder="How do you handle this currently?" 
+                  hint="Mention any apps, tools, or manual steps you take now."
+                />
+                <Input 
+                  label="Current Cost to Manage (₦) *" 
+                  name="solutionCost" 
+                  value={formData.solutionCost} 
+                  onChange={handleChange} 
+                  placeholder="e.g., 2000" 
+                  hint="How much you spend on your current alternative solution."
+                />
               </div>
             )}
 
@@ -153,12 +279,40 @@ export default function SurveyPlatform() {
                   <Zap className="w-6 h-6" />
                   <h2 className="text-xl font-extrabold uppercase tracking-tight">Ideal Solution</h2>
                 </div>
-                <TextArea label="Describe your Ideal Tech Solution *" name="idealSolution" value={formData.idealSolution} onChange={handleChange} />
+                <TextArea 
+                  label="Describe your Ideal Tech Solution *" 
+                  name="idealSolution" 
+                  value={formData.idealSolution} 
+                  onChange={handleChange} 
+                  placeholder="What would the perfect app or service look like?" 
+                  hint="Describe features that would solve your problem permanently."
+                />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Input label="Willing to Pay (Max Monthly ₦) *" name="maxPayment" value={formData.maxPayment} onChange={handleChange} />
-                  <Input label="Email Address *" name="email" value={formData.email} onChange={handleChange} />
+                  <Input 
+                    label="Willing to Pay (Max Monthly ₦) *" 
+                    name="maxPayment" 
+                    value={formData.maxPayment} 
+                    onChange={handleChange} 
+                    placeholder="e.g., 1500" 
+                    hint="The maximum amount you'd pay for the ideal solution."
+                  />
+                  <Input 
+                    label="Email Address *" 
+                    name="email" 
+                    value={formData.email} 
+                    onChange={handleChange} 
+                    placeholder="e.g., user@example.com" 
+                    hint="We will use this to keep you updated on progress."
+                  />
                 </div>
-                <TextArea label="Additional Comments" name="additionalComments" value={formData.additionalComments} onChange={handleChange} />
+                <TextArea 
+                  label="Additional Comments" 
+                  name="additionalComments" 
+                  value={formData.additionalComments} 
+                  onChange={handleChange} 
+                  placeholder="Any other thoughts you'd like to share?" 
+                  hint="Optional: Share anything we might have missed."
+                />
               </div>
             )}
 
@@ -188,11 +342,11 @@ export default function SurveyPlatform() {
         <div className="max-w-4xl mx-auto px-4 flex flex-col items-center gap-4">
           <div className="flex items-center gap-2 text-black font-bold">
             <Linkedin className="w-5 h-5 text-[#03594d]" />
-            <a href="https://linkedin.com/in/stanleyibeh" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              linkedin.com/in/stanleyibeh
+            <a href="https://linkedin.com/in/heisobims" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              linkedin.com/in/heisobims
             </a>
           </div>
-          <p className="text-xs text-gray-500">© 2024 Building for Nigeria. All rights reserved.</p>
+          <p className="text-xs text-gray-500">© 2026 Building for Nigeria. All rights reserved.</p>
         </div>
       </footer>
     </div>
@@ -200,26 +354,51 @@ export default function SurveyPlatform() {
 }
 
 // Custom reusable components for clean code
-const Input = ({ label, name, value, onChange, placeholder }) => (
+const Input = ({ label, name, value, onChange, placeholder, hint }) => (
   <div className="space-y-1">
     <label className="block text-[10px] font-extrabold text-black uppercase tracking-widest">{label}</label>
-    <input type="text" name={name} value={value} onChange={onChange} placeholder={placeholder} className="w-full px-4 py-3 rounded-lg border-2 border-black focus:bg-[#82eda6]/10 outline-none transition-colors" required />
+    <input 
+      type="text" 
+      name={name} 
+      value={value} 
+      onChange={onChange} 
+      placeholder={placeholder} 
+      className="w-full px-4 py-3 rounded-lg border-2 border-black focus:bg-[#82eda6]/10 outline-none transition-colors" 
+      required 
+    />
+    {hint && <p className="text-[10px] text-gray-500 italic mt-1">{hint}</p>}
   </div>
 );
 
-const Select = ({ label, name, value, options, onChange }) => (
+const Select = ({ label, name, value, options, onChange, hint }) => (
   <div className="space-y-1">
     <label className="block text-[10px] font-extrabold text-black uppercase tracking-widest">{label}</label>
-    <select name={name} value={value} onChange={onChange} className="w-full px-4 py-3 rounded-lg border-2 border-black bg-white outline-none focus:bg-[#82eda6]/10" required>
+    <select 
+      name={name} 
+      value={value} 
+      onChange={onChange} 
+      className="w-full px-4 py-3 rounded-lg border-2 border-black bg-white outline-none focus:bg-[#82eda6]/10" 
+      required
+    >
       <option value="">Select option</option>
       {options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
     </select>
+    {hint && <p className="text-[10px] text-gray-500 italic mt-1">{hint}</p>}
   </div>
 );
 
-const TextArea = ({ label, name, value, onChange, placeholder }) => (
+const TextArea = ({ label, name, value, onChange, placeholder, hint }) => (
   <div className="space-y-1">
     <label className="block text-[10px] font-extrabold text-black uppercase tracking-widest">{label}</label>
-    <textarea name={name} value={value} onChange={onChange} rows="3" placeholder={placeholder} className="w-full px-4 py-3 rounded-lg border-2 border-black focus:bg-[#82eda6]/10 outline-none transition-colors" required />
+    <textarea 
+      name={name} 
+      value={value} 
+      onChange={onChange} 
+      rows="3" 
+      placeholder={placeholder} 
+      className="w-full px-4 py-3 rounded-lg border-2 border-black focus:bg-[#82eda6]/10 outline-none transition-colors" 
+      required 
+    />
+    {hint && <p className="text-[10px] text-gray-500 italic mt-1">{hint}</p>}
   </div>
 );
