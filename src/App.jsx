@@ -55,8 +55,8 @@ export default function SurveyPlatform() {
       <div className="min-h-screen bg-rose-50 flex items-center justify-center p-4">
         <div className="text-center">
           <CheckCircle2 className="w-24 h-24 text-pink-500 mx-auto mb-6" />
-          <h2 className="text-4xl font-bold mb-4">Thank You!</h2>
-          <p className="text-pink-600">Your detailed submission for Nigeria 🇳🇬 has been received.</p>
+          <h2 className="text-4xl font-bold mb-4">Submitted! 😊</h2>
+          <p className="text-pink-600">Thank you for joining us in making Nigeria a better place.</p>
         </div>
       </div>
     );
