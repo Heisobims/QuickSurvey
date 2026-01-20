@@ -67,7 +67,7 @@ export default function SurveyPlatform() {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <Lightbulb className="w-16 h-16 text-pink-500 mx-auto mb-4" />
-          <h1 className="text-5xl font-bold text-gray-800">Share Your Idea</h1>
+          <h1 className="text-5xl font-bold text-gray-800">We are building for you - Share your Idea</h1>
         </div>
 
         <div className="bg-white rounded-3xl shadow-xl p-8">
