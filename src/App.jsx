@@ -95,7 +95,7 @@ export default function SurveyPlatform() {
         <div className="text-center mb-12 animate-slide-down">
           <div className="inline-flex items-center justify-center w-28 h-28 mb-6 overflow-hidden rounded-full border-4 border-[#03594d] shadow-lg">
             <img 
-              src="YOUR_IMAGE_LINK_HERE" 
+              src="https://lh3.google.com/u/0/d/1a0vWFWVWtj9mACG4KUCI9eol31Xw3lfv=w450-h337-p-k-nu-iv1?auditContext=thumbnail" 
               alt="Profile" 
               className="w-full h-full object-cover"
             />
