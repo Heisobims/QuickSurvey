@@ -102,9 +102,9 @@ export default function SurveyPlatform() {
       className="w-full h-full object-cover"
     />
   </div>
-          <h1 className="text-5xl font-bold text-gray-800 mb-4">We Are Building For You - Share Your Idea</h1>
+          <h1 className="text-5xl font-bold text-gray-800 mb-4">Building for Nigeria, by Nigerians</h1>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
-            Help us understand the challenges you face in Nigeria. Your detailed insights drive meaningful tech solutions.
+            Hi, I'm Stanley, Help us understand the challenges you face in Nigeria. Your detailed insights drive meaningful tech solutions.
           </p>
         </div>
 
