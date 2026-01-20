@@ -64,7 +64,7 @@ export default function SurveyPlatform() {
     e.preventDefault();
     
     // Updated Web App URL
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwtO9vOta20jRcuQVEK4wsxDV_CCyMLsiZLZfuOtg2pRd7UwVtJ3DzRWLtRMOHgy2UbXA/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUuKDjjyV8lEz8ybdALiWAC8KvCg7HKmecvjJocXNBccoYjCX9p1XZS9dxdhlzx1zZzA/exec';
     
     try {
       // 1. Send to Google Sheets (Using simple mode for Apps Script compatibility)
