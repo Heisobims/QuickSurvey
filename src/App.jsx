@@ -290,6 +290,38 @@ export default function SurveyPlatform() {
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <Input 
+                    label="Preferred Platform *" 
+                    name="preferredPlatform" 
+                    value={formData.preferredPlatform} 
+                    onChange={handleChange} 
+                    placeholder="e.g., Mobile App or WhatsApp" 
+                    hint="Where would you prefer to use this solution?"
+                  />
+                  <Select 
+                    label="Urgency Level *" 
+                    name="urgency" 
+                    value={formData.urgency} 
+                    options={['Very Urgent', 'Somewhat Urgent', 'Not Urgent']} 
+                    onChange={handleChange} 
+                    hint="How badly do you need this solved right now?"
+                  />
+                  <Select 
+                    label="Willingness to Pay *" 
+                    name="paymentWillingness" 
+                    value={formData.paymentWillingness} 
+                    options={['Yes', 'No', 'Maybe']} 
+                    onChange={handleChange} 
+                    hint="Would you pay to have this problem solved?"
+                  />
+                  <Select 
+                    label="Willingness to Use *" 
+                    name="willingness" 
+                    value={formData.willingness} 
+                    options={['Yes', 'No', 'Maybe']} 
+                    onChange={handleChange} 
+                    hint="Would you actually use this if it were built?"
+                  />
+                  <Input 
                     label="Willing to Pay (Max Monthly ₦) *" 
                     name="maxPayment" 
                     value={formData.maxPayment} 
