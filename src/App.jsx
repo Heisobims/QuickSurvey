@@ -31,15 +31,16 @@ export default function SurveyPlatform() {
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUuKDjjyV8lEz8ybdALiWAC8KvCg7HKmecvjJocXNBccoYjCX9p1XZS9dxdhlzx1zZzA/exec';
     
     try {
-      const formDataToSend = new FormData();
-      Object.keys(formData).forEach(key => {
-        formDataToSend.append(key, formData[key]);
-      });
-
+      // Updated fetch call to handle Google Apps Script CORS requirements
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
-        body: formDataToSend
+        mode: 'no-cors', // Essential for Google Apps Script
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
       });
+
       setSubmitted(true);
       setTimeout(() => { 
         setSubmitted(false); 
