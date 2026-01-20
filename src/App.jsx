@@ -31,13 +31,30 @@ export default function SurveyPlatform() {
     const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzUuKDjjyV8lEz8ybdALiWAC8KvCg7HKmecvjJocXNBccoYjCX9p1XZS9dxdhlzx1zZzA/exec';
     
     try {
+      const formDataToSend = new FormData();
+      Object.keys(formData).forEach(key => {
+        formDataToSend.append(key, formData[key]);
+      });
+
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify(formData)
+        body: formDataToSend
       });
       setSubmitted(true);
-      setTimeout(() => { setSubmitted(false); setCurrentSection(1); }, 4000);
+      setTimeout(() => { 
+        setSubmitted(false); 
+        setCurrentSection(1);
+        setFormData({
+          name: '', email: '', phone: '', location: '', state: '',
+          sector: '', occupation: '', ageGroup: '', gender: '',
+          educationLevel: '', monthlyIncome: '', problem: '',
+          frequency: '', duration: '', impact: '', peopleAffected: '',
+          financialImpact: '', timeImpact: '', currentSolution: '',
+          solutionCost: '', idealSolution: '', preferredPlatform: '',
+          paymentWillingness: '', maxPayment: '', urgency: '',
+          willingness: '', referralSource: '', additionalComments: ''
+        });
+      }, 4000);
     } catch (error) {
       alert('Error submitting form. Please try again.');
     }
@@ -171,8 +188,8 @@ export default function SurveyPlatform() {
         <div className="max-w-4xl mx-auto px-4 flex flex-col items-center gap-4">
           <div className="flex items-center gap-2 text-black font-bold">
             <Linkedin className="w-5 h-5 text-[#03594d]" />
-            <a href="https://linkedin.com/in/heisobims" target="_blank" rel="noopener noreferrer" className="hover:underline">
-              linkedin.com/in/heisobims
+            <a href="https://linkedin.com/in/stanleyibeh" target="_blank" rel="noopener noreferrer" className="hover:underline">
+              linkedin.com/in/stanleyibeh
             </a>
           </div>
           <p className="text-xs text-gray-500">© 2024 Building for Nigeria. All rights reserved.</p>
